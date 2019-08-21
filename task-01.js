@@ -1,0 +1,18 @@
+const users = ["Mango", "Poly", "Ajax", "Chelsey"];
+console.log(users.shift());
+console.log(users);
+console.log(users.pop());
+console.log(users);
+users.unshift("Lux");
+console.log(users);
+users.push("Jay", "Kiwi");
+console.log(users);
+const userToDelete = "Ajax";
+let numberToDelete = users.indexOf(userToDelete);
+users.splice(numberToDelete, 1);
+console.log(users);
+const userToInsert = "Kong";
+const insertBefore = "Jay";
+let numberToChange = users.indexOf(insertBefore);
+users.splice(numberToChange, 0, userToInsert);
+console.log(users);
