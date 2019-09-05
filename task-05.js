@@ -1,3 +1,4 @@
+'use strict';
 const numOfSymbol = 40;
 function formatString(string) {
   const arrayPerSymbol = string.split("");

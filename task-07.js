@@ -1,7 +1,8 @@
+'use strict';
 const numbers = [];
 while (true) {
   let input = prompt("Введите число");
-  if (!Number(input) && input != null) {
+  if (!Number(input) && input !== null) {
     alert("Вы  ввели не число");
     continue;
   }

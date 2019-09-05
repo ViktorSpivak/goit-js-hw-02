@@ -1,3 +1,4 @@
+'use strict';
 function checkForSpam(str) {
   if (
     str.toLowerCase().includes("spam") ||
