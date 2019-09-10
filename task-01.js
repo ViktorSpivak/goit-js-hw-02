@@ -1,19 +1,10 @@
-'use strict';
-const users = ["Mango", "Poly", "Ajax", "Chelsey"];
-console.log(users.shift());
-console.log(users);
-console.log(users.pop());
-console.log(users);
-users.unshift("Lux");
-console.log(users);
-users.push("Jay", "Kiwi");
-console.log(users);
-const userToDelete = "Ajax";
-let numberToDelete = users.indexOf(userToDelete);
-users.splice(numberToDelete, 1);
-console.log(users);
-const userToInsert = "Kong";
-const insertBefore = "Jay";
-let numberToChange = users.indexOf(insertBefore);
-users.splice(numberToChange, 0, userToInsert);
-console.log(users);
+"use strict";
+const fruits = ["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"];
+const dates = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+function logItems(array) {
+  for (const element of array) {
+    console.log(`${array.indexOf(element) + 1} - ${element}`);
+  }
+}
+logItems(fruits);
+logItems(dates);

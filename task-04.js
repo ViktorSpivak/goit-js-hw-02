@@ -1,14 +1,23 @@
-'use strict';
-function findLongestWord(string) {
-  const array = string.split(" ");
-  let numOfLongestWord = 0;
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i].split("").length > array[numOfLongestWord].split("").length) {
-      numOfLongestWord = i;
-    }
-  }
-  console.log(array[numOfLongestWord]);
-}
-findLongestWord("The quick brown fox jumped over the lazy dog");
-findLongestWord("Google do a roll");
-findLongestWord("May the force be with you");
+"use strict";
+// const numOfSymbol = 40;
+// function formatString(example) {
+//   const arrayPerSymbol = example.split("");
+
+//   if (arrayPerSymbol.length >= numOfSymbol) {
+//     arrayPerSymbol.length = numOfSymbol;
+//     arrayPerSymbol.push("...");
+//   }
+//   console.log(arrayPerSymbol.join(""));
+// }
+
+const formatString = example =>
+  example.length > 40 ? example.slice(0, 40) + "..." : example;
+
+console.log(formatString("Curabitur ligula sapien, tincidunt non."));
+console.log(formatString("Vestibulum facilisis, purus nec pulvinar iaculis."));
+console.log(formatString("Curabitur ligula sapien."));
+console.log(
+  formatString(
+    "Nunc sed turpis. Curabitur a felis in nunc fringilla tristique."
+  )
+);

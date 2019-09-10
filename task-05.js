@@ -1,16 +1,19 @@
-'use strict';
-const numOfSymbol = 40;
-function formatString(string) {
-  const arrayPerSymbol = string.split("");
+"use strict";
+// function checkForSpam(str) {
+//   if (
+//     str.toLowerCase().includes("spam") ||
+//     str.toLowerCase().includes("sale")
+//   ) {
+//     return true;
+//   }
+//   return false;
+// }
+const checkForSpam = str =>
+  str.toLowerCase().includes("spam") || str.toLowerCase().includes("sale")
+    ? true
+    : false;
 
-  if (arrayPerSymbol.length >= numOfSymbol) {
-    arrayPerSymbol.length = numOfSymbol;
-    arrayPerSymbol.push("...");
-  }
-  console.log(arrayPerSymbol.join(""));
-}
-
-formatString("Curabitur ligula sapien, tincidunt non.");
-formatString("Vestibulum facilisis, purus nec pulvinar iaculis.");
-formatString("Curabitur ligula sapien.");
-formatString("Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.");
+console.log(checkForSpam("Latest technology news"));
+console.log(checkForSpam("JavaScript weekly newsletter"));
+console.log(checkForSpam("Get best sale offers now!"));
+console.log(checkForSpam("[SPAM] How to earn fast money?"));

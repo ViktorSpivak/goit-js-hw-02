@@ -1,18 +1,15 @@
-'use strict';
-function calculateEngravingPrice(message, pricePerWord) {
-  return message.split(" ").length * pricePerWord;
+"use strict";
+function findLongestWord(example) {
+  const array = example.split(" ");
+  let numOfLongestWord = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i].length > array[numOfLongestWord].length) {
+      numOfLongestWord = i;
+    }
+  }
+  console.log(array[numOfLongestWord]);
 }
-console.log(
-  calculateEngravingPrice(
-    "Proin sociis natoque et magnis parturient montes mus",
-    10
-  )
-);
-console.log(
-  calculateEngravingPrice(
-    "Proin sociis natoque et magnis parturient montes mus",
-    20
-  )
-);
-console.log(calculateEngravingPrice("Donec orci lectus aliquam est", 40));
-console.log(calculateEngravingPrice("Donec orci lectus aliquam est", 20));
+
+findLongestWord("The quick brown fox jumped over the lazy dog");
+findLongestWord("Google do a roll");
+findLongestWord("May the force be with you");

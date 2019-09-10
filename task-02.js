@@ -1,10 +1,18 @@
-'use strict';
-const fruits = ["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"];
-const dates = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
-function logItems(array) {
-  for (const element of array) {
-    console.log(`${array.indexOf(element) + 1} - ${element}`);
-  }
-}
-logItems(fruits);
-logItems(dates);
+"use strict";
+const calculateEngravingPrice = (message, pricePerWord) =>
+  message.split(" ").length * pricePerWord;
+
+console.log(
+  calculateEngravingPrice(
+    "Proin sociis natoque et magnis parturient montes mus",
+    10
+  )
+);
+console.log(
+  calculateEngravingPrice(
+    "Proin sociis natoque et magnis parturient montes mus",
+    20
+  )
+);
+console.log(calculateEngravingPrice("Donec orci lectus aliquam est", 40));
+console.log(calculateEngravingPrice("Donec orci lectus aliquam est", 20));

@@ -1,14 +1,20 @@
-'use strict';
-function checkForSpam(str) {
-  if (
-    str.toLowerCase().includes("spam") ||
-    str.toLowerCase().includes("sale")
-  ) {
-    return true;
+"use strict";
+const numbers = [];
+let total = 0;
+let input;
+do {
+  input = prompt("Введите число");
+  Number(input)
+    ? numbers.push(Number(input))
+    : input !== null
+    ? alert("Вы  ввели не число")
+    : null;
+} while (input !== null);
+if (numbers.length !== 0) {
+  for (let element of numbers) {
+    total = total + element;
   }
-  return false;
+  console.log(`Общая сумма чисел равна ${total}`);
+} else {
+  console.log("Вы ничего не ввели");
 }
-console.log(checkForSpam("Latest technology news"));
-console.log(checkForSpam("JavaScript weekly newsletter"));
-console.log(checkForSpam("Get best sale offers now!"));
-console.log(checkForSpam("[SPAM] How to earn fast money?"));
